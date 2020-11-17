@@ -5,9 +5,10 @@
 # -------------------------------------------------------------------------
 
 # ---- example index page ----
+@auth.requires_membership('admin')
 def index():
-    response.flash = T("Hello World")
-    return dict(message=T('Welcome to web2py!'))
+    response.flash = T("Welcome")
+    return dict(message=T('Este é o site de suporte a esteeuquero.com.br!'))
 
 # ---- API (example) -----
 @auth.requires_login()
@@ -56,6 +57,7 @@ def download():
     http://..../[app]/default/download/[filename]
     """
     return response.download(request, db)
+@auth.requires_membership('admin')
 def pagprod():
     itens = produtos()
     return dict(itens = itens)
