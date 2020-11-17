@@ -3,8 +3,5 @@ def conecta():
     app_token = '1605637282724491d653c'
     source_id = '36865079'
     loma=lomadeepy.Lomadee(app_token,source_id)
-    return loma
-def loma_conecta():
-    import lomadeepy
-    categoria=lomadeepy.Categories.search(conecta())
+    categoria=lomadeepy.Categories.all(loma)
     return(categoria)
