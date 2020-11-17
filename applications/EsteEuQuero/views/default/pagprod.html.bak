@@ -1,0 +1,17 @@
+{{BEAUTIFY(response._vars)}}
+{{cont = 1}}
+{{for i in itens:}}
+						<!-- Product {{=cont}} -->
+
+						<div class="product-item {{=i[2]}}">
+							<div class="product discount product_filter">
+								<div class="product_image">
+{{=i[1]}}
+								</div>
+ <div class="product_info">
+									<h6 class="product_name">{{=i[0]}}</h6>
+</div>                               
+							</div>
+											</div>
+{{cont=cont+1}}
+{{pass}}
