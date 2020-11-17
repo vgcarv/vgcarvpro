@@ -10,7 +10,7 @@ def index():
     import lomadeepy
     app_token = '1605637282724491d653c'
     source_id = '36865079'
-    resp = lomadeepy.Categories(app_token, source_id)
+    resp = dir(lomadeepy.Categories.all(app_token, source_id))
     response.flash = T("Welcome")
     return dict(message=T('Este é o site de suporte a esteeuquero.com.br!'),resp=resp)
 
