@@ -8,7 +8,9 @@
 @auth.requires_membership('admin')
 def index():
     import lomadeepy
-    resp = dir(lomadeepy.Categories.all(conecta()))
+    app_token = '1605637282724491d653c'
+    source_id = '36865079'
+    resp = dir(lomadeepy.Categories.all(lomadeepy.Lomadee(app_token, source_id)))
     response.flash = T("Welcome")
     return dict(message=T('Este é o site de suporte a esteeuquero.com.br!'),resp=resp)
 
