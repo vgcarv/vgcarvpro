@@ -8,7 +8,7 @@
 @auth.requires_membership('admin')
 def index():
     import lomadeepy
-    resp = dir(lomadeepy.Categories)
+    resp = dir(lomadeepy.Categories.all)
     response.flash = T("Welcome")
     return dict(message=T('Este é o site de suporte a esteeuquero.com.br!'),resp=resp)
 
