@@ -51,3 +51,10 @@
 [2020-11-18 01:27:30] DELETE EsteEuQuero/static/plugin_layouts/layouts/Balanced/preview.png: -25
 [2020-11-18 01:27:38] DELETE EsteEuQuero/static/plugin_layouts/layouts/Balanced/license.txt: -216
 [2020-11-18 01:27:44] DELETE EsteEuQuero/static/plugin_layouts/layouts/Balanced/index.html: -126
+[2020-11-18 11:22:01] EDIT EsteEuQuero/views/default/lojas.html: 13
+[2020-11-18 11:22:49] EDIT EsteEuQuero/views/default/lojas.html: 1
+[2020-11-18 11:23:31] EDIT EsteEuQuero/views/default/lojas.html: -1
+[2020-11-18 11:24:23] EDIT EsteEuQuero/views/default/lojas.html: 1
+[2020-11-18 11:24:35] EDIT EsteEuQuero/views/default/lojas.html: 0
+[2020-11-18 11:25:46] EDIT EsteEuQuero/views/default/lojas.html: 0
+[2020-11-18 11:29:04] EDIT EsteEuQuero/views/default/lojas.html: -3

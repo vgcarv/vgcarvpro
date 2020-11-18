@@ -1,12 +1,9 @@
 {{extend 'layout.html'}}
 {{resp}}
 
-<p>requestinfo</p>
-<p>{{=resp['requestInfo']}}</p>
-<p>pagination</p>
-<p>{{=resp['pagination']}}</p>
-<p>stores</p>
-<p>{{resp['stores']}}</p>
+<p>
+    Lojas
+</p>
 <Table border=1>
     <th>Imagem</th>
     <th>Nome</th>
@@ -23,7 +20,22 @@
 <td>{{=r['id']}}</td>
 <td>{{=r['hasOffer']}}</td>
 <td>
-    {{=r['events']}}
+    <table border = "1">
+        <th>Tipo evento</th>
+        <th>evento</th>
+        <th>Comi. fixa</th>
+        <th>comissão</th>
+        {{for e in r['events']:}}
+        <tr>
+       <td>{{=e['eventType']}}</td>
+       <td>{{=e['event']}}</td>
+       <td>{{=e['fixedCommission']}}</td> 
+       <td>{{=e['commission']}}</td> 
+       </tr>
+        
+        {{pass}}
+    </table>
+    {{r['events']}}
 </td>
 </tr>
 {{pass}}
