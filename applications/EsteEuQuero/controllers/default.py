@@ -9,7 +9,7 @@
 def index():
  
     response.flash = T("Welcome")
-    return dict(message=T('Este é o site de suporte a esteeuquero.com.br!'),resp=resp)
+    return dict(message=T('Este é o site de suporte a esteeuquero.com.br!'))
 
 # ---- API (example) -----
 @auth.requires_login()
