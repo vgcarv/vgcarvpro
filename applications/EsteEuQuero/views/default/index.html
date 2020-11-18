@@ -30,6 +30,7 @@
 <p>{{resp['stores']}}</p>
 <ul>Lojas</ul>
 {{for r in resp['stores']:}}
+{{if int(r['hasOffer']) > 0:}}
 <li>
 name - {{=r['name']}}
 maxCommission - {{=r['maxCommission']}}
@@ -38,6 +39,7 @@ hasOffer - {{=r['hasOffer']}}
 link - {{=r['link']}}
 events - {{=r['events']}}
 thumbnail - {{=r['thumbnail']}}
+{{pass}}
 {{pass}}
 </li>
 <center>
