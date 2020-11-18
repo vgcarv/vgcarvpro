@@ -62,7 +62,8 @@ def download():
 def pagprod():
     itens = produtos()
     return dict(itens = itens)
-
+    
+@auth.requires_membership('admin')
 def lojas():
     import lomadeepy
     app_token = '1605637282724491d653c'
