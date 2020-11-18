@@ -7,7 +7,6 @@
 <p>{{=resp['pagination']}}</p>
 <p>stores</p>
 <p>{{resp['stores']}}</p>
-<ul>Lojas</ul>
 <Table>
     <th>Imagem</th>
     <th>Comissão</th>
@@ -17,7 +16,6 @@
 {{for r in resp['stores']:}}
 {{if int(r['hasOffer']) > 0:}}
 <tr>
-<li>
  <td> <img src="{{=r['thumbnail']}}"> name - {{=r['name']}}</td>
 <td>{{=r['maxCommission']}}</td>
 <td>{{=r['id']}}</td>
