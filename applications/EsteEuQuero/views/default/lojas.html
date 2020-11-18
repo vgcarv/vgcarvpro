@@ -9,6 +9,7 @@
 <p>{{resp['stores']}}</p>
 <Table>
     <th>Imagem</th>
+    <th>Nome</th>
     <th>Comissão</th>
     <th>Id</th>
     <th>Ofertas</th>
@@ -16,7 +17,8 @@
 {{for r in resp['stores']:}}
 {{if int(r['hasOffer']) > 0:}}
 <tr>
- <td> <img src="{{=r['thumbnail']}}"> name - {{=r['name']}}</td>
+ <td> <img src="{{=r['thumbnail']}}"></td> 
+    <td> {{=r['name']}}</td>
 <td>{{=r['maxCommission']}}</td>
 <td>{{=r['id']}}</td>
 <td>{{=r['hasOffer']}}</td>
