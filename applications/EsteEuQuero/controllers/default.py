@@ -7,11 +7,7 @@
 # ---- example index page ----
 @auth.requires_membership('admin')
 def index():
-    import lomadeepy
-    app_token = '1605637282724491d653c'
-    source_id = '36865079'
-    sandbox=True
-    resp = lomadeepy.Stores(app_token, source_id, sandbox).all()
+ 
     response.flash = T("Welcome")
     return dict(message=T('Este é o site de suporte a esteeuquero.com.br!'),resp=resp)
 
@@ -66,3 +62,11 @@ def download():
 def pagprod():
     itens = produtos()
     return dict(itens = itens)
+
+def lojas():
+    import lomadeepy
+    app_token = '1605637282724491d653c'
+    source_id = '36865079'
+    sandbox=True
+    resp = lomadeepy.Stores(app_token, source_id, sandbox).all()
+    return dict(message=T('Lojas de fornecedores Lomadee!'),resp=resp)

@@ -13,6 +13,7 @@
     {{=T("admin")}}
   </a>
   <a class="btn btn-secondary" href="{{=URL('examples','default','index')}}">{{=T("Página inicial")}}</a>
+  <a class="btn btn-secondary" href="{{=URL('default','Lojas', )}}">{{=T('Lojas Lomadee')}}</a>
   <a class="btn btn-secondary" href="{{=URL('default','grid/auth_user')}}">{{=T('Grid Example')}}</a>
 </center>
 {{elif 'content' in globals():}}
@@ -21,24 +22,6 @@
 {{=BEAUTIFY(response._vars)}}
 {{pass}}
 
-{{resp}}
-<p>requestinfo</p>
-<p>{{=resp['requestInfo']}}</p>
-<p>pagination</p>
-<p>{{=resp['pagination']}}</p>
-<p>stores</p>
-<p>{{resp['stores']}}</p>
-<ul>Lojas</ul>
-{{for r in resp['stores']:}}
-{{if int(r['hasOffer']) > 0:}}
-<li>
-  <img src="{{=r['thumbnail']}}"> name - {{=r['name']}}
-maxCommission - {{=r['maxCommission']}}
-id - {{=r['id']}}
-hasOffer - {{=r['hasOffer']}}
-events - {{=r['events']}}
-{{pass}}
-{{pass}}
 </li>
 <center>
 <iframe style="width:1280px;height:2420px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://www.esteeuquero.com.br">    </iframe>

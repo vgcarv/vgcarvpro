@@ -1,0 +1,19 @@
+{{extend 'layout.html'}}
+{{resp}}
+<p>requestinfo</p>
+<p>{{=resp['requestInfo']}}</p>
+<p>pagination</p>
+<p>{{=resp['pagination']}}</p>
+<p>stores</p>
+<p>{{resp['stores']}}</p>
+<ul>Lojas</ul>
+{{for r in resp['stores']:}}
+{{if int(r['hasOffer']) > 0:}}
+<li>
+  <img src="{{=r['thumbnail']}}"> name - {{=r['name']}}
+maxCommission - {{=r['maxCommission']}}
+id - {{=r['id']}}
+hasOffer - {{=r['hasOffer']}}
+events - {{=r['events']}}
+{{pass}}
+{{pass}}
