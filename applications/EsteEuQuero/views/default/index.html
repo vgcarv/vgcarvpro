@@ -32,13 +32,12 @@
 {{for r in resp['stores']:}}
 {{if int(r['hasOffer']) > 0:}}
 <li>
-name - {{=r['name']}}
+  <img src="{{=r['thumbnail']}}"> name - {{=r['name']}}
 maxCommission - {{=r['maxCommission']}}
 id - {{=r['id']}}
 hasOffer - {{=r['hasOffer']}}
 link - {{=r['link']}}
 events - {{=r['events']}}
-thumbnail - {{=r['thumbnail']}}
 {{pass}}
 {{pass}}
 </li>
