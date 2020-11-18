@@ -44,3 +44,10 @@
 [2020-11-17 17:34:56] EDIT EsteEuQuero/views/default/index.html: 2
 [2020-11-17 17:35:39] EDIT EsteEuQuero/views/default/index.html: 0
 [2020-11-17 17:36:21] EDIT EsteEuQuero/views/default/index.html: 0
+[2020-11-18 01:27:00] DELETE EsteEuQuero/views/plugin_layouts/layouts/Balanced.html: -151
+[2020-11-18 01:27:07] DELETE EsteEuQuero/static/plugin_layouts/superfish.js: -112
+[2020-11-18 01:27:11] DELETE EsteEuQuero/static/plugin_layouts/superfish.css: -134
+[2020-11-18 01:27:21] DELETE EsteEuQuero/static/plugin_layouts/layouts/Balanced/default.css: -201
+[2020-11-18 01:27:30] DELETE EsteEuQuero/static/plugin_layouts/layouts/Balanced/preview.png: -25
+[2020-11-18 01:27:38] DELETE EsteEuQuero/static/plugin_layouts/layouts/Balanced/license.txt: -216
+[2020-11-18 01:27:44] DELETE EsteEuQuero/static/plugin_layouts/layouts/Balanced/index.html: -126
