@@ -3,6 +3,7 @@
 <div id="page-wrapper">
     <div class="main-page">
     <div class="col_3">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <p> 
@@ -18,20 +19,22 @@
     <th>Eventos</th>
 =======
 >>>>>>> 671b995dd3a4d2ed90b76b39b52994bd4f3408e5
+=======
+>>>>>>> 1ef72db53d37f1512163fd114040a0643a705f31
 {{for r in resp['stores']:}}
-{{if int(r['hasOffer']) > 0:}}
-<div class="col-md-3 widget widget1">
+    {{if int(r['hasOffer']) > 0:}}
+    <div class="col-md-3 widget widget1">
     <div class="r3_counter_box">
          <img src="{{=r['thumbnail']}}">
          <div class="stats">
-         <h5><strong>{{=r['name']}}</strong></h5>
-         <span>ID = {{=r['id']}}</span>
-</div>
-</div>
-</div>
+            <h5><strong>{{=r['name']}}</strong></h5>
+            <span>ID = {{=r['id']}}</span>
+         </div>
+    </div>
+    </div>
 {{pass}}
 {{pass}}
-</div>
-</div>
+    </div>
+    </div>
 </div>
 
