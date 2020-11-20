@@ -1,6 +1,10 @@
 {{extend 'layout.html'}}
 {{resp}}
+<div id="page-wrapper">
+    <div class="main-page">
+    <div class="col_3">
 
+<<<<<<< HEAD
 <p> 
     
     Lojas
@@ -12,33 +16,22 @@
     <th>Id</th>
     <th>Ofertas</th>
     <th>Eventos</th>
+=======
+>>>>>>> 671b995dd3a4d2ed90b76b39b52994bd4f3408e5
 {{for r in resp['stores']:}}
 {{if int(r['hasOffer']) > 0:}}
-<tr>
- <td> <img src="{{=r['thumbnail']}}"></td> 
-    <td> {{=r['name']}}</td>
-<td>{{=r['maxCommission']}}</td>
-<td>{{=r['id']}}</td>
-<td>{{=r['hasOffer']}}</td>
-<td>
-    <table border = "1">
-        <th>Tipo evento</th>
-        <th>evento</th>
-        <th>Comi. fixa</th>
-        <th>comissão</th>
-        {{for e in r['events']:}}
-        <tr>
-       <td>{{=e['eventType']}}</td>
-       <td>{{=e['event']}}</td>
-       <td>{{=e['fixedCommission']}}</td> 
-       <td>{{=e['commission']}}</td> 
-       </tr>
-        
-        {{pass}}
-    </table>
-    {{r['events']}}
-</td>
-</tr>
+<div class="col-md-3 widget widget1">
+    <div class="r3_counter_box">
+         <img src="{{=r['thumbnail']}}">
+         <div class="stats">
+         <h5><strong>{{=r['name']}}</strong></h5>
+         <span>ID = {{=r['id']}}</span>
+</div>
+</div>
+</div>
 {{pass}}
 {{pass}}
-</Table>
+</div>
+</div>
+</div>
+
