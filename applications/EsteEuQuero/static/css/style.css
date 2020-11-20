@@ -2279,22 +2279,7 @@ h4.modal-title {
     -ms-transition:  0.5 sall;
     transition:  0.5s all;
 }
-.col-lg-3.widget {
-  width: 18.8%;
-    -webkit-transition: 0.5s all;
-    -moz-transition:  0.5s all;
-    -o-transition:  0.5s all;
-    -ms-transition:  0.5 sall;
-    transition:  0.5s all;
-}
-.col-xl-3.widget {
-  width: 18.8%;
-    -webkit-transition: 0.5s all;
-    -moz-transition:  0.5s all;
-    -o-transition:  0.5s all;
-    -ms-transition:  0.5 sall;
-    transition:  0.5s all;
-}
+
 .widget:hover i.fa {
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.3);
