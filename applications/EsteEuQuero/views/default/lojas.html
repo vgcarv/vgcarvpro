@@ -5,15 +5,18 @@
     <div class="col_3">
 {{for r in resp['stores']:}}
     {{if int(r['hasOffer']) > 0:}}
+   
     <div class="col-md-3 widget widget1">
+        <center>
     <div class="r3_counter_box">
          <img src="{{=r['thumbnail']}}">
          <div class="stats">
             <h5><strong>{{=r['name']}}</strong></h5>
             <span>ID = {{=r['id']}}</span>
          </div>
+    </div></center>
     </div>
-    </div>
+
 {{pass}}
 {{pass}}
     </div>
