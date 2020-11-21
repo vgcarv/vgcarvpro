@@ -65,20 +65,19 @@ def pagprod():
     
 @auth.requires_membership('admin')
 def lojas():
-    import lomadeepy
-    app_token = '1605637282724491d653c'
-    source_id = '36865079'
+    app_t, sour_id = lomaCredencial()
+    import lomadeepy 
+    app_token = app_t
+    source_id = sour_id
     sandbox=True
     resp = lomadeepy.Stores(app_token, source_id, sandbox).all()
     return dict(message=T('Lojas de fornecedores Lomadee!'),resp=resp)
 
 def lojasOfertas():
-    from configparser import ConfigParser
-    config = ConfigParser()
-    config.read('private/lomadee.ini')
-    import lomadeepy
-    app_token = config.get('rest', 'app_token') #'1605637282724491d653c'
-    source_id = config.get('rest', 'source_id') #'36865079'
+    app_t, sour_id = lomaCredencial()
+    import lomadeepy 
+    app_token = app_t
+    source_id = sour_id
     loja = request.vars['loja']
     sandbox=True
     resp = lomadeepy.Offers(app_token, source_id, sandbox).store(loja)
