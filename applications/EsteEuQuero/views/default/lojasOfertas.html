@@ -1,5 +1,5 @@
 {{extend 'layout.html'}}
-{{resp}}
+{{=resp}}
 <div id="page-wrapper">
     <div class="page-inner">
     <div class="row text-center pad-top">
@@ -11,7 +11,7 @@
      <center>
  <a href = "{{=r['link']}}">
  <div class="r3_counter_box">
-      <img src="{{=r['thumbnail']}}" width="100" height="150">
+      <img src="{{=r['thumbnail']}}" width="30%" height="30%">
       <div class="stats">
          <h5><strong>{{=r['name']}}</strong></h5>
          <span>Preço = {{=r['price']}}</span>
