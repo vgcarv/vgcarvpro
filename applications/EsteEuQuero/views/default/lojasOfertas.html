@@ -1,5 +1,5 @@
 {{extend 'layout.html'}}
-{{resp}}
+{{=resp}}
 <div id="page-wrapper">
     <div class="page-inner">
     <div class="row text-center pad-top">
@@ -8,7 +8,7 @@
    
     <div class="col-md-4 col-sm-4 col-lg-3 col-xs-2 target">
         <center>
-    <a href = "{{=URL('default','lojasOferta')/?loja=r['id']}}">
+    <a href = "#{{=r['id']}}">
     <div class="r3_counter_box">
          <img src="{{=r['thumbnail']}}">
          <div class="stats">
