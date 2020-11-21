@@ -1,6 +1,9 @@
 def lomaCredencial():
+    #Buscar configuracao na pasta private
     import os
-    fp = os.path.join(request.folder,'private','lomadee.ini')    
+    fp = os.path.join(request.folder,'private','lomadee.ini')   
+    # 
+    #Abre arquivo formato .ini e busca parametros
     from configparser import ConfigParser
     config = ConfigParser()
     config.read(fp)
