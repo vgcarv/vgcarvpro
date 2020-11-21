@@ -73,9 +73,12 @@ def lojas():
     return dict(message=T('Lojas de fornecedores Lomadee!'),resp=resp)
 
 def lojasOfertas():
+    from configparser import ConfigParser
+    config = ConfigParser()
+    config.read('private/lomadee.ini')
     import lomadeepy
-    app_token = '1605637282724491d653c'
-    source_id = '36865079'
+    app_token = config.get('rest', 'app_token') #'1605637282724491d653c'
+    source_id = config.get('rest', 'source_id') #'36865079'
     loja = request.vars['loja']
     sandbox=True
     resp = lomadeepy.Offers(app_token, source_id, sandbox).store(loja)
