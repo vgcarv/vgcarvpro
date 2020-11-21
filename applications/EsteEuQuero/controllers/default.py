@@ -76,7 +76,7 @@ def lojasOfertas():
     import lomadeepy
     app_token = '1605637282724491d653c'
     source_id = '36865079'
-    loja = response.vars['loja']
+    loja = request.vars['loja']
     sandbox=True
     resp = lomadeepy.Offers(app_token, source_id, sandbox).store(loja)
     return dict(message=T('Ofertas do fornecedores Lomadee!'),resp=resp)
