@@ -1,0 +1,28 @@
+{{extend 'layout.html'}}
+{{block header}}
+<!-- <center style="background-color: #333; color:white; padding:30px">
+  <h1>/{{=request.application}}/{{=request.controller}}/{{=request.function}}/Testando GIT
+</center> -->
+{{end}}
+{{if 'message' in globals():}}
+<h2>{{=message}}</h2>
+
+<center style="padding:50px">
+  <a class="btn btn-primary" href="{{=URL('admin','default','index', scheme='https')}}">
+    <i class="glyphicon glyphicon-cog"></i>
+    {{=T("admin")}}
+  </a>
+  <a class="btn btn-secondary" href="{{=URL('default','index')}}">{{=T("Página inicial")}}</a>
+  <a class="btn btn-secondary" href="{{=URL('default','lojas', )}}">{{=T('Lojas Lomadee')}}</a>
+  <a class="btn btn-secondary" href="{{=URL('default','grid/auth_user')}}">{{=T('Grid Example')}}</a>
+</center>
+{{elif 'content' in globals():}}
+{{=content}}
+{{else:}}
+{{=BEAUTIFY(response._vars)}}
+{{pass}}
+
+</li>
+<center>
+<!--<iframe style="width:1280px;height:2420px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://www.esteeuquero.com.br">    </iframe>-->
+    </center>
