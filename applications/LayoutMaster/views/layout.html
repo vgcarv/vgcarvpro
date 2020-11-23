@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="{{=T.accepted_language or 'en'}}"> <!--<![endif]-->
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
   <head>
     <meta charset="utf-8">
     <!-- www.phpied.com/conditional-comments-block-downloads/ -->
@@ -13,9 +15,11 @@
           initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
           user-scalable = yes allows the user to zoom in -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{=response.title or request.application}}</title>
+    <title>Responsive HTML5 Website Template for Developers | 3rd Wave Media</title>
+    <meta name="description" content="Responsive HTML5 Website landing Page for Developers">
     <!-- http://dev.w3.org/html5/markup/meta.name.html -->
     <meta name="application-name" content="VGCarvPro">
+    <meta name="author" content="Vinicius Gomes Carvalho"> 
     <!-- Speaking of Google, don't forget to set your site up:
          http://google.com/webmasters -->
     <meta name="google-site-verification" content="">
@@ -28,18 +32,33 @@
     <link rel="stylesheet" href="{{=URL('static','css/web2py-bootstrap4.css')}}"/>
     <link rel="shortcut icon" href="{{=URL('static','images/favicon.ico')}}" type="image/x-icon">
     <link rel="apple-touch-icon" href="{{=URL('static','images/favicon.png')}}">
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+    <link rel="stylesheet" href="{{=URL('css','bootstrap.min.css')}}">   
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="{{=URL('css','font-awesome.css')}}">
+    <!-- github acitivity css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css'">
+    <link rel="stylesheet" href="https://caseyscarborough.github.io/github-activity/github-activity-0.1.0.min.css'">
+    
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href=URL('css/styles.css'}}">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+   
     <!-- All JavaScript at the bottom, except for Modernizr which enables
   
          HTML5 elements & feature detects -->
     <!-- Bootstrap Core JavaScript -->
 \    <script src="{{=URL('static','js/bootstrap.js')}}"> </script>
     <!-- //Bootstrap Core JavaScript -->
-    <script src="{{=URL('static','js/custom.js')}}"> </script>
     <script src="{{=URL('static','js/modernizr-2.8.3.min.js')}}"></script>
     <!-- Favicons -->
     {{include 'web2py_ajax.html'}} <!-- this includes jquery.js, calendar.js/.css and web2py.js -->
     {{block head}}{{end}}
   </head>
+
+
   <body>
     <div class="w2p_flash alert alert-dismissable">{{=response.flash or ''}}</div>
     <!-- Navbar ======================================= -->
@@ -135,5 +154,22 @@
       });
     </script>
     {{pass}}
+        <!-- ******FOOTER****** --> 
+        <footer class="footer">
+          <div class="container text-center">
+                  <small class="copyright">Designed with <i class="fa fa-heart"></i> by <a href="https://themes.3rdwavemedia.com" target="_blank">3rd Wave Media</a> for developers</small>
+          </div><!--//container-->
+      </footer><!--//footer-->
+   
+      <!-- Javascript -->          
+      <script type="text/javascript" src="URL(''js', 'jquery-1.11.1.min.js'}}"></script>
+      <script type="text/javascript" src="URL(''js', 'jquery-migrate-1.2.1.min.js'}}"></script>
+      <script type="text/javascript" src="URL(''js', 'bootstrap/js/bootstrap.min.js'}}"></script>    
+      <script type="text/javascript" src="URL(''js', 'jquery-rss/dist/jquery.rss.min.js'}}"></script> 
+      <!-- github activity plugin -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+      <script type="text/javascript" src="https://caseyscarborough.github.io/github-activity/github-activity-0.1.0.min.js"></script>
+      <!-- custom js -->
+      <script type="text/javascript" src="{{=URL('js','main.js')}}"></script>       
   </body>
 </html>
