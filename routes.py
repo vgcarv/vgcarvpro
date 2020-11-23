@@ -72,7 +72,7 @@ routers = dict(
     # base router
     BASE=dict(
         default_application='EsteEuQuero',
-        applications = ['EsteEuQuero','welcome', 'admin'], ),
+        applications = ['EsteEuQuero','welcome', 'admin', 'LayoutMaster'], ),
 
 )
 
