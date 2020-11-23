@@ -59,6 +59,63 @@
   </head>
 
 
-         
-     
+  <body>
+    <div class="w2p_flash alert alert-dismissable">{{=response.flash or ''}}</div>
+    <!-- Navbar ======================================= -->
+   
+
+    <!-- Masthead ===================================== -->
+    {{block header}}
+    {{end}}
+    <!-- Main ========================================= -->
+    <!-- Begin page content -->
+    <div class="container-fluid main-container main-content">
+      {{include}}
+      {{=response.toolbar() if response.show_toolbar else ''}}
+    </div>
+
+    {{block footer}} <!-- this is default footer -->
+    <footer class="footer container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="copyright pull-left">{{=T('Copyright')}} &#169; {{=request.now.year}}</div>
+          <div id="poweredBy" class="pull-right">
+            {{=T('Powered by')}}
+            <a href="http://www.web2py.com/">web2py</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    {{end}}
+    <!-- The javascript =============================== -->
+    <script src="{{=URL('static','js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{=URL('static','js/web2py-bootstrap4.js')}}"></script>
+    {{block page_js}}{{end page_js}}
+    {{if response.google_analytics_id:}}
+    <!-- Analytics ==================================== -->
+    <script src="{{=URL('static','js/analytics.min.js')}}"></script>
+    <script type="text/javascript">
+      analytics.initialize({
+      'Google Analytics':{trackingId:'{{=response.google_analytics_id}}'}
+      });
+    </script>
+    {{pass}}
+        <!-- ******FOOTER****** --> 
+        <footer class="footer">
+          <div class="container text-center">
+                  <small class="copyright">Designed with <i class="fa fa-heart"></i> by <a href="https://themes.3rdwavemedia.com" target="_blank">3rd Wave Media</a> for developers</small>
+          </div><!--//container-->
+      </footer><!--//footer-->
+   
+      <!-- Javascript -->          
+      <script type="text/javascript" src="URL(''js', 'jquery-1.11.1.min.js'}}"></script>
+      <script type="text/javascript" src="URL(''js', 'jquery-migrate-1.2.1.min.js'}}"></script>
+      <script type="text/javascript" src="URL(''js', 'bootstrap/js/bootstrap.min.js'}}"></script>    
+      <script type="text/javascript" src="URL(''js', 'jquery-rss/dist/jquery.rss.min.js'}}"></script> 
+      <!-- github activity plugin -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+      <script type="text/javascript" src="https://caseyscarborough.github.io/github-activity/github-activity-0.1.0.min.js"></script>
+      <!-- custom js -->
+      <script type="text/javascript" src="{{=URL('js','main.js')}}"></script>       
+  </body>
 </html>
