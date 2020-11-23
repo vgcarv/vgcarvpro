@@ -5,7 +5,7 @@
 # -------------------------------------------------------------------------
 
 # ---- example index page ----
-@auth.requires_membership('admin')
+
 def index():
  
     response.flash = T("Welcome")
