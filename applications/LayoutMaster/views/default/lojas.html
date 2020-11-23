@@ -1,0 +1,26 @@
+{{extend 'layout.html'}}
+{{resp}}
+<div id="page-wrapper">
+    <div class="page-inner">
+    <div class="row text-center pad-top">
+{{for r in resp['stores']:}}
+    {{if int(r['hasOffer']) > 0:}}
+   
+    <div class="col-md-4 col-sm-4 col-lg-3 col-xs-2 target">
+        <center>
+    <a href = "lojasOfertas/?loja={{=r['id']}}">
+    <div class="r3_counter_box">
+         <img src="{{=r['thumbnail']}}">
+         <div class="stats">
+            <h5><strong>{{=r['name']}}</strong></h5>
+            <span>Ofertas = {{=int(r['hasOffer'])}} - ID = {{=r['id']}}</span>
+         </div>
+    </div></a></center>
+    </div>
+
+{{pass}}
+{{pass}}
+    <div class="clearfix"> </div>
+    </div>
+    </div>
+  </div>
