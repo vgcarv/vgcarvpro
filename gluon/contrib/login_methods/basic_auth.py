@@ -13,8 +13,8 @@ def basic_auth(server="http://127.0.0.1"):
     def basic_login_aux(username,
                         password,
                         server=server):
-        key = base64.b64encode(username + ':' + password)
-        headers = {'Authorization': 'Basic ' + key}
+        key = base64.b64encode((username + ':' + password).encode("utf-8"))
+        headers = {'Authorization': 'Basic ' + key.decode("utf-8")}
         request = urllib2.Request(server, None, headers)
         try:
             urlopen(request)
